@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Plain text"
+            android:ems="10"
+            android:id="@+id/edit_text_plain" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Cipher text"
+            android:ems="10"
+            android:id="@+id/edit_text_cipher" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_plain" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+            android:text="Decrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_decrypt" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edit_text_cipher"/>
+
+    <Button
+            android:text="Encrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_encrypt" app:layout_constraintEnd_toStartOf="@+id/button_decrypt"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/button_decrypt"
+            app:layout_constraintBottom_toBottomOf="@+id/button_decrypt"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Enter username"
+            android:ems="10"
+            android:id="@+id/edit_text_username" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_decrypt" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="Load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_load" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edit_text_username"/>
+    <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_save" app:layout_constraintEnd_toStartOf="@+id/button_load"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/button_load"
+            app:layout_constraintBottom_toBottomOf="@+id/button_load"/>
+</android.support.constraint.ConstraintLayout>
